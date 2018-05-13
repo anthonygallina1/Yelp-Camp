@@ -43,6 +43,7 @@ Each Component has:
   *  "helmet"
   *  "hoek" "^5.0.3"
   *  express-validator
+  *  npm-audit "0.0.3"
 
 ### Gulp Watch
 
