@@ -58,6 +58,10 @@ Each Component has:
 * Automatically add's browser prefix to css. For browser compatibility.
 
  ` npm run sass `
+ 
+ ### Compress and add source maps
+ 
+ `npm run autoprefixer`
 
 
 # Images
