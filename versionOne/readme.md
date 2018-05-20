@@ -39,7 +39,11 @@ Each Component has:
   *  "nodemon"
   *  "ES6 JS code"
   *  "npm run start"
+  *  "gulp": "^4.0.0"
   *  "gulp-autoprefixer"
+  *  "gulp-postcss": "^7.0.1"
+  *  "gulp-sass": "^4.0.1"
+  *  "gulp-sourcemaps": "^2.6.4"
   *  "helmet"
   *  "hoek" "^5.0.3"
   *  express-validator
