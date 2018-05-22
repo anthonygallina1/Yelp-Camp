@@ -26,7 +26,7 @@ const cssnano      = require('cssnano');
 
     return gulp.src('dist/css/**/*.css')
         .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer(), cssnano()  ]))
+        .pipe(postcss([ autoprefixer({browsers: ['last 2 version']}), cssnano()  ]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/css/'));
 });
