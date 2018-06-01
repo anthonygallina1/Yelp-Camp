@@ -6,7 +6,8 @@ const port = process.env.PORT || 3000;
 const dotenv = require("dotenv");
 const helmet = require('helmet');
 const frameguard = require('frameguard');
-const session = require( 'express-session' ) ;
+const session = require( 'express-session' );
+const csrf       = require('csurf');
 app.use(helmet());
 app.disable('x-powered-by');
 app.use(frameguard({ action: 'deny' }));
@@ -24,6 +25,10 @@ const { error } = dotenv.config();
 if (error) {
   throw error
 };
+
+// initialize and use csrf
+const csrfProtection = csrf();
+app.use(csrfProtection);
 
 // Template engine set up
 app.set("view engine", "ejs");
@@ -54,9 +59,10 @@ let campgrounds = [
    res.redirect("/campgrounds");
  });
 
+//get csrf middle ware token
  app.get("/campgrounds/new", (req, res) => {
-   res.render("new.ejs");
- })
+   res.render("new.ejs", {csrfToken: req.csrfToken()});
+ });
 
  app.get('/', (req, res) => {
      res.render("landing");
