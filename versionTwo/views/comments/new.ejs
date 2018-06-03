@@ -1,0 +1,25 @@
+
+<% include ../partials/header %>
+<h1>Add New Comment to <%= campground.name %></h1>
+
+  <div>
+    <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+      <h2>Create a New Comment</h2>
+      <div class="floated-label-wrapper">
+        <label for="name">name</label>
+        <input type="text" name="comment[text]" placeholder="text">
+      </div>
+      <div class="floated-label-wrapper">
+        <label for="image">image</label>
+        <input type="text" name="comment[author]" placeholder="author">
+      </div>
+
+      <button class="button floated-label-wrapper">Submit!</button>
+    </form>
+  </div>
+  <div><a href="/campgrounds">Go Back</a></div>
+
+
+
+
+  <% include ../partials/footer %>

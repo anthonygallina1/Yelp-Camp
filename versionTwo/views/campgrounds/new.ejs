@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+  <div>
+    <form action="/campgrounds" method="POST" class="callout text-center">
+      <h2>Create a New Campground</h2>
+      <div class="floated-label-wrapper">
+        <label for="name">name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter Camp Site name">
+      </div>
+      <div class="floated-label-wrapper">
+        <label for="image">image</label>
+        <input type="url" id="image" name="image" required pattern="^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png)$" placeholder="https image url">
+      </div>
+      <div class="floated-label-wrapper">
+        <label for="name">name</label>
+        <input type="text" id="name" name="description" required placeholder="Enter Camp Site description">
+      </div>
+      <button class="button floated-label-wrapper">Submit!</button>
+    </form>
+  </div>
+  <div><a href="/campgrounds">Go Back</a></div>
+
+
+
+
+  <% include ../partials/footer %>

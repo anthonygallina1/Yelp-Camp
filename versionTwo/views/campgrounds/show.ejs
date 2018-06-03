@@ -1,0 +1,24 @@
+<!-- show.ejs -->
+<% include ../partials/header %>
+<h1 class="text-center"><%=campground.name%></h1>
+<div class="grid-x">
+  <div class="cell medium-3 large-4">cell medium-3 large-3
+    <div class="stacked text-right">
+      <button type="button"><a class="primary button" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a></button>
+    <button type="button" class="success button">Save</button>
+    </div>
+
+
+
+</div>
+<div class="cell medium-9 large-8">cell medium-9 large-9
+  <img class="shadow" src="<%= campground.image %>" alt="campground picture">
+
+  <p><%= campground.description %></p>
+  <% campground.comments.forEach(function(comment){ %>
+    <p><strong><%= comment.author %></strong> - <%= comment.text %></p>
+
+</div>
+<% }) %>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+  <div class="text-center">
+    <!-- this was campgrounds.ejs Now renamed to index.ejs as per routing -->
+    <h2>Campgrounds</h2>
+  </div>
+
+  <div class="row" data-equalizer="foo">
+    <div class="cell small-1 grid-x  grid-padding-x small-1 medium-up-2 large-up-4">
+      <% campgrounds.forEach(function(campground) { %>
+        <div class="cell" data-equalizer-watch="foo">
+          <div class="card row" data-equalizer="bar">
+            <img src="<%= campground.image %>" alt="campground">
+
+            <div class="card-section" data-equalizer-watch="bar">
+              <h4><%= campground.name %></h4>
+              <h5>This is a row of cards.</h5>
+              <p><a href="/campgrounds/<%= campground._id %>" class="button">read more</a></p>
+              <a href="/campgrounds/new">Add A New Campground</a>
+
+            </div>
+          </div>
+        </div>
+        <% }); %>
+
+    </div>
+  </div>
+
+  <% include ../partials/footer %>

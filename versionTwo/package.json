@@ -1,0 +1,35 @@
+{
+  "name": "versionone",
+  "version": "1.0.0",
+  "description": "Yelp Camp 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js -e js,ejs",
+    "sass": "./node_modules/.bin/gulp watch"
+  },
+  "author": "Colt Steele Student Anthony Gallina",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "csurf": "^1.9.0",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.2.0",
+    "helmet": "^3.12.0",
+    "hoek": "^5.0.3",
+    "mongoose": "^5.1.0",
+    "nodemon": "^1.17.4"
+  },
+  "devDependencies": {
+    "graceful-fs": "^4.1.11",
+    "gulp": "^3.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "minimatch": "^3.0.4",
+    "npm-audit": "0.0.3"
+  }
+}
