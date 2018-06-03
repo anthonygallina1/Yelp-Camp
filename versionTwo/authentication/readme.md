@@ -7,3 +7,4 @@ Local Development build
 * Mongo Data base installed
 * Node JS installed
 * NPM installed
+* Add and configure .env file
